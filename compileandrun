@@ -1,0 +1,11 @@
+#!/bin/bash
+cd ${0%/*} || exit 1    # run from this directory
+
+(
+cd src
+#add the location where you store ImageJ package
+javac -cp "/home/user/ij153-linux64-java8/ImageJ/ij.jar" -d . TwoPhaseCapture.java
+
+
+java  -cp "/home/user/ij153-linux64-java8/ImageJ/ij.jar": capture.TwoPhaseInterface.TwoPhaseCapture
+)
